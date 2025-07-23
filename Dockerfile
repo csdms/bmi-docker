@@ -1,4 +1,4 @@
-# Build the C, C++, Fortran, and Python BMI specifications in a Miniforge (Linux/Ubuntu) image.
+# Build the C, C++, Fortran, and Python BMI mappings in a Miniforge (Linux/Ubuntu) image.
 FROM condaforge/miniforge3:25.3.0-3
 
 LABEL author="Mark Piper"
@@ -17,40 +17,40 @@ RUN conda install -y \
 
 ENV base_url=https://github.com/csdms
 
-ENV package=bmi-c
+ENV project=bmi-c
 ENV version="2.1.2"
-ENV prefix=/opt/${package}
-RUN git clone --branch v${version} ${base_url}/${package} ${prefix}
+ENV prefix=/opt/${project}
+RUN git clone --branch v${version} ${base_url}/${project} ${prefix}
 WORKDIR ${prefix}/_build
 RUN cmake .. -DCMAKE_INSTALL_PREFIX=${CONDA_DIR} && \
     make && \
     make install && \
     make clean
 
-ENV package=bmi-cxx
+ENV project=bmi-cxx
 ENV version="2.0.2"
-ENV prefix=/opt/${package}
-RUN git clone --branch v${version} ${base_url}/${package} ${prefix}
+ENV prefix=/opt/${project}
+RUN git clone --branch v${version} ${base_url}/${project} ${prefix}
 WORKDIR ${prefix}/_build
 RUN cmake .. -DCMAKE_INSTALL_PREFIX=${CONDA_DIR} && \
     make && \
     make install && \
     make clean
 
-ENV package=bmi-fortran
+ENV project=bmi-fortran
 ENV version="2.0.3"
-ENV prefix=/opt/${package}
-RUN git clone --branch v${version} ${base_url}/${package} ${prefix}
+ENV prefix=/opt/${project}
+RUN git clone --branch v${version} ${base_url}/${project} ${prefix}
 WORKDIR ${prefix}/_build
 RUN cmake .. -DCMAKE_INSTALL_PREFIX=${CONDA_DIR} && \
     make && \
     make install && \
     make clean
 
-ENV package=bmi-python
+ENV project=bmi-python
 ENV version="2.0.1"
-ENV prefix=/opt/${package}
-RUN git clone --branch v${version} ${base_url}/${package} ${prefix}
+ENV prefix=/opt/${project}
+RUN git clone --branch v${version} ${base_url}/${project} ${prefix}
 WORKDIR ${prefix}
 RUN pip install . && \
     pip cache purge

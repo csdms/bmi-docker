@@ -1,6 +1,6 @@
 # bmi-docker
 
-The [Basic Model Interface](https://bmi.readthedocs.io) (BMI) specifications for C, C++, Fortran, and Python, Dockerized.
+The [Basic Model Interface](https://bmi.csdms.io) (BMI) mapppings for C, C++, Fortran, and Python, Dockerized.
 
 The image built from these instructions can be used as a base for building models that expose a BMI in these languages,
 or for inter-language model coupling.
@@ -11,9 +11,9 @@ Build an image locally with:
 ```
 docker build --tag bmi .
 ```
-The image is built on the [condaforge/mambaforge](https://hub.docker.com/r/condaforge/mambaforge) base image.
+The image is built on the [condaforge/miniforge3](https://hub.docker.com/r/condaforge/miniforge3/) base image.
 The OS is Linux/Ubuntu.
-`conda` and `mamba`, as well as the BMI specifications, are installed in `CONDA_DIR=/opt/conda`.
+`conda`, as well as the BMI language mappings, are installed in `CONDA_DIR=/opt/conda`.
 The *base* environment is activated.
 
 ## Run a container
@@ -22,7 +22,7 @@ Run a container from this image interactively:
 ```
 docker run -it bmi
 ```
-This starts a bash shell in the container, where the specifications can be accessed.
+This starts a bash shell in the container where the language mappings can be accessed.
 
 ## Developer notes
 

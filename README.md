@@ -1,6 +1,6 @@
 # bmi-docker
 
-The [Basic Model Interface](https://bmi.csdms.io) (BMI) mapppings for C, C++, Fortran, and Python, Dockerized.
+The [Basic Model Interface](https://bmi.csdms.io) (BMI) mappings for C, C++, Fortran, and Python, Dockerized.
 
 The image built from these instructions can be used as a base for building models that expose a BMI in these languages,
 or for inter-language model coupling.

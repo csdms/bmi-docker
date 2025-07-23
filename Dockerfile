@@ -52,6 +52,7 @@ ENV version="2.0.1"
 ENV prefix=/opt/${package}
 RUN git clone --branch v${version} ${base_url}/${package} ${prefix}
 WORKDIR ${prefix}
-RUN pip install .
+RUN pip install . && \
+    pip cache purge
 
 WORKDIR /opt

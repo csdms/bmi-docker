@@ -6,7 +6,7 @@ LABEL email="mark.piper@colorado.edu"
 
 RUN conda install -y \
     make \
-    cmake \
+    "cmake<4" \
     c-compiler \
     cxx-compiler \
     fortran-compiler \

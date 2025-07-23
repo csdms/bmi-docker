@@ -4,8 +4,16 @@ FROM condaforge/mambaforge:24.3.0-0
 LABEL author="Mark Piper"
 LABEL email="mark.piper@colorado.edu"
 
-RUN mamba install -y make cmake c-compiler cxx-compiler fortran-compiler pkg-config "numpy<2" && \
-    mamba clean --all
+RUN mamba install -y \
+    make \
+    cmake \
+    c-compiler \
+    cxx-compiler \
+    fortran-compiler \
+    pkg-config \
+    "numpy<2" \
+    vim \
+    && mamba clean --all -y
 
 ENV base_url=https://github.com/csdms
 

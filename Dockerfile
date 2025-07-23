@@ -38,7 +38,7 @@ RUN cmake .. -DCMAKE_INSTALL_PREFIX=${CONDA_DIR} && \
     make clean
 
 ENV package=bmi-fortran
-ENV version="2.0.2"
+ENV version="2.0.3"
 ENV prefix=/opt/${package}
 RUN git clone --branch v${version} ${base_url}/${package} ${prefix}
 WORKDIR ${prefix}/_build

@@ -1,10 +1,10 @@
-# Build the C, C++, Fortran, and Python BMI specifications in a Mambaforge (Linux/Ubuntu) image.
-FROM condaforge/mambaforge:24.3.0-0
+# Build the C, C++, Fortran, and Python BMI specifications in a Miniforge (Linux/Ubuntu) image.
+FROM condaforge/miniforge3:25.3.0-3
 
 LABEL author="Mark Piper"
 LABEL email="mark.piper@colorado.edu"
 
-RUN mamba install -y \
+RUN conda install -y \
     make \
     cmake \
     c-compiler \
@@ -13,7 +13,7 @@ RUN mamba install -y \
     pkg-config \
     "numpy<2" \
     vim \
-    && mamba clean --all -y
+    && conda clean --all -y
 
 ENV base_url=https://github.com/csdms
 

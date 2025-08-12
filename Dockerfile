@@ -13,7 +13,7 @@ RUN conda install -y \
     cxx-compiler \
     fortran-compiler \
     pkg-config \
-    "numpy<2" \
+    numpy \
     vim \
     bmi-c \
     bmi-cxx \

@@ -82,7 +82,7 @@ Start a Python session to run the *heat* model through its BMI.
 The Python BMI example includes a set of [example notebooks](https://github.com/csdms/bmi-example-python/tree/master/examples).
 Run them through a container.
 ```bash
-docker run -it --port 8888:8888 bmi-example-python /bin/bash -c "\
+docker run -it -p 8888:8888 csdms/bmi:latest /bin/bash -c "\
     conda install jupyter -y --quiet && \
     jupyter notebook \
     --notebook-dir=/opt/bmi-example-python/examples \

@@ -30,7 +30,7 @@ RUN git clone --branch v${version} --depth 1 ${base_url}/${project} ${prefix}
 WORKDIR ${prefix}/_build
 RUN cmake .. -DCMAKE_INSTALL_PREFIX=${CONDA_DIR} && \
     make && \
-    make test && \
+    ctest -V && \
     make install && \
     make clean
 
@@ -41,7 +41,7 @@ RUN git clone --branch v${version} --depth 1 ${base_url}/${project} ${prefix}
 WORKDIR ${prefix}/_build
 RUN cmake .. -DCMAKE_INSTALL_PREFIX=${CONDA_DIR} && \
     make && \
-    make test && \
+    ctest -V && \
     make install && \
     make clean
 
@@ -52,7 +52,7 @@ RUN git clone --branch v${version} --depth 1 ${base_url}/${project} ${prefix}
 WORKDIR ${prefix}/_build
 RUN cmake .. -DCMAKE_INSTALL_PREFIX=${CONDA_DIR} && \
     make && \
-    make test && \
+    ctest -V && \
     make install && \
     make clean
 

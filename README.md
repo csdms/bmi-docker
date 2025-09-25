@@ -1,3 +1,7 @@
+[![Basic Model Interface](https://img.shields.io/badge/CSDMS-Basic%20Model%20Interface-green.svg)](https://bmi.readthedocs.io/)
+[![DOI](https://zenodo.org/badge/850066110.svg)](https://doi.org/10.5281/zenodo.17204327)
+![Docker Image Version](https://img.shields.io/docker/v/csdms/bmi)
+
 # bmi-docker
 
 The [Basic Model Interface](https://bmi.csdms.io) (BMI) mappings and examples for C, C++, Fortran, and Python, Dockerized.
